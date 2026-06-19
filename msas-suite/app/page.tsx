@@ -8,6 +8,11 @@ const APPS = [
   { id: "epidemio", name: "Sen-Epidemio", url: "http://localhost:4003", icon: "🚨", desc: "Radar Épidémiologique (IA)", color: "from-red-600 to-red-400", bg: "bg-red-50" },
   { id: "samu", name: "SAMU-Connect", url: "http://localhost:4004", icon: "🚑", desc: "Dispatching du 1515", color: "from-cyan-600 to-cyan-400", bg: "bg-cyan-50" },
   { id: "ecmu", name: "e-CMU", url: "http://localhost:4005", icon: "💳", desc: "Couverture Maladie Universelle", color: "from-green-600 to-green-400", bg: "bg-green-50" },
+  { id: "vaccin", name: "Sen-Vaccin", url: "http://localhost:4006", icon: "💉", desc: "Carnet Vaccination Biométrique", color: "from-emerald-600 to-emerald-400", bg: "bg-emerald-50" },
+  { id: "forma", name: "Forma-Santé", url: "http://localhost:4007", icon: "🎓", desc: "Formation Continue en Langues Locales", color: "from-violet-600 to-violet-400", bg: "bg-violet-50" },
+  { id: "pharma", name: "Sen-PharmaNat", url: "http://localhost:4008", icon: "📦", desc: "Prédiction Ruptures Médicaments (IA)", color: "from-orange-600 to-orange-400", bg: "bg-orange-50" },
+  { id: "stats", name: "Sen-SantéStats", url: "http://localhost:4009", icon: "📊", desc: "Observatoire Épidémiologique National", color: "from-sky-600 to-sky-400", bg: "bg-sky-50" },
+  { id: "tele", name: "Télé-Expertise", url: "http://localhost:4010", icon: "🌐", desc: "Réseau Sécurisé des Spécialistes", color: "from-teal-600 to-teal-400", bg: "bg-teal-50" },
 ];
 
 const BG = "#064e3b"
@@ -245,7 +250,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: 16 }}>
             {APPS.map((app, i) => (
               <a key={app.id} href={app.url} target="_blank" rel="noopener noreferrer"
                 className={`card-hover grid-card-${i}`}
